@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "@antfu"
+  ],
+  "rules": {
+    "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-unknown-property": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "jsx-quotes": "off",
+    "no-console": "warn",
+    "space-before-function-paren": "off",
+    "import/order": "off",
+    "@typescript-eslint/no-any": "off",
+    "vue/one-component-per-file": "off"
+  }
+}
