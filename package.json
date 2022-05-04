@@ -16,7 +16,7 @@
     "pinia": "^2.0.6",
     "vue": "^3.2.24",
     "vue-demi": "^0.12.1",
-    "vue-router": "^4.0.12"
+    "vue-router": "4.0.15"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.12.2",
