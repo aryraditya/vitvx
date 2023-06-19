@@ -7,7 +7,7 @@ specifiers:
   '@vitejs/plugin-vue': ^1.10.2
   '@vitejs/plugin-vue-jsx': ^1.3.1
   '@vueuse/core': ^7.2.1
-  '@vueuse/head': ^0.7.2
+  '@vueuse/head': ^0.9.0
   critters: ^0.0.15
   cross-env: ^7.0.3
   eslint: ^8.4.1
@@ -30,7 +30,7 @@ specifiers:
 dependencies:
   '@vitejs/plugin-vue-jsx': 1.3.1
   '@vueuse/core': 7.2.1_vue@3.2.24
-  '@vueuse/head': 0.7.2_vue@3.2.24
+  '@vueuse/head': 0.9.8_vue@3.2.24
   nprogress: 0.2.0
   pinia: 2.0.6_typescript@4.5.2+vue@3.2.24
   vue: 3.2.24
@@ -53,7 +53,7 @@ devDependencies:
   vite-plugin-pwa: 0.11.10_vite@2.7.1
   vite-plugin-vue-layouts: 0.5.0_71c2c9eea5b434903ec77fcf81766be5
   vite-plugin-windicss: 1.5.4_vite@2.7.1
-  vite-ssg: 0.16.2_21d9a5f109dd5a74678e2a7a9c73d643
+  vite-ssg: 0.16.2_08ffa001f4d95dd7c7ccfa4d10b3cf84
   vue-tsc: 0.29.8_typescript@4.5.2
 
 packages:
@@ -2084,12 +2084,17 @@ packages:
       vue-demi: 0.12.1_vue@3.2.24
     dev: false
 
-  /@vueuse/head/0.7.2_vue@3.2.24:
-    resolution: {integrity: sha512-97RxYbIYwB9yFuRbdDbktsjKS0k12wYNksYV/UtYLOFNx+GAflK2kQ63b+sx09MJllEozD3GLeXV7O8rzMskeQ==}
+  /@vueuse/head/0.9.8_vue@3.2.24:
+    resolution: {integrity: sha512-zt8+JksoVFKxRvmABlaUHA62w+8nOcD8cJnaJ0+SHcr6xaIP3GXgh7/n2TzUoWw4l3d9UxRNs+tapgHdsQ7RbA==}
     peerDependencies:
-      vue: '>=3'
+      vue: '>=2.7 || >=3'
     dependencies:
+      '@vueuse/shared': 9.13.0_vue@3.2.24
+      '@zhead/schema': 0.8.5
+      '@zhead/schema-vue': 0.8.5_vue@3.2.24
       vue: 3.2.24
+    transitivePeerDependencies:
+      - '@vue/composition-api'
 
   /@vueuse/shared/7.2.1_vue@3.2.24:
     resolution: {integrity: sha512-kb4SmBk5n8NEHFNMU+WPoT1GRyCvYYpiBbFQM/i0Hb2rkZn6tra1yBbynjF0x+Li5yGG92/RW6EQTAyqpQ319A==}
@@ -2105,6 +2110,14 @@ packages:
       vue: 3.2.24
       vue-demi: 0.12.1_vue@3.2.24
     dev: false
+
+  /@vueuse/shared/9.13.0_vue@3.2.24:
+    resolution: {integrity: sha512-UrnhU+Cnufu4S6JLCPZnkWh0WwZGUp72ktOF2DFptMlOs3TOdVv8xJN53zhHGARmVOsz5KqOls09+J1NR6sBKw==}
+    dependencies:
+      vue-demi: 0.12.1_vue@3.2.24
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
 
   /@windicss/config/1.5.4:
     resolution: {integrity: sha512-muRPFulqh7nU3VrsPb5+k6ulNyiw8VGg62zAWRZIBfeCRXZb2gV1Q8a/tPn8X1T/+HTt4f/1bzFiusqMKscmlw==}
@@ -2129,6 +2142,26 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@zhead/schema-raw/0.8.5:
+    resolution: {integrity: sha512-Aq+9mksf5zbtj7HYluT6PVyfpQ6z7mja9MzjFxg76Vt+Q9i0oL1XN6ZYaCXImWRafwbyAxjFQ5aUCVyFn79OpA==}
+    dependencies:
+      '@zhead/schema': 0.8.5
+
+  /@zhead/schema-vue/0.8.5_vue@3.2.24:
+    resolution: {integrity: sha512-6aXjYy3fZVeYBLrHcJQqzqwzC/2tafRO5UxZEgBHnryRnzeLNZV6nTptDvIPWiJObMoJTK21vbg3gkfLNQg84g==}
+    peerDependencies:
+      vue: '>=2.7 || >=3'
+    dependencies:
+      '@vueuse/shared': 9.13.0_vue@3.2.24
+      '@zhead/schema': 0.8.5
+      '@zhead/schema-raw': 0.8.5
+      vue: 3.2.24
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+
+  /@zhead/schema/0.8.5:
+    resolution: {integrity: sha512-1S3Otr2zpl1zwP72dNseVXQNG9tnTQ6hHUEUYwINvBjRj6bHcUwdE+Itc9OLxnGAJT/7p8P7GHGo5sshXJNJsA==}
 
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
@@ -6191,7 +6224,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-ssg/0.16.2_21d9a5f109dd5a74678e2a7a9c73d643:
+  /vite-ssg/0.16.2_08ffa001f4d95dd7c7ccfa4d10b3cf84:
     resolution: {integrity: sha512-paoBbRdaKBznYf+aTqN2Ltf5dQiBgUKwM2uvwjmPsuPQbVcznzceb13cpoG4WXxlaW2EvPns30NRIM+U6RZU3w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -6205,7 +6238,7 @@ packages:
       critters:
         optional: true
     dependencies:
-      '@vueuse/head': 0.7.2_vue@3.2.24
+      '@vueuse/head': 0.9.8_vue@3.2.24
       chalk: 4.1.2
       critters: 0.0.15
       fs-extra: 10.0.0
@@ -6382,7 +6415,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.24
-    dev: false
 
   /vue-eslint-parser/8.0.1_eslint@8.4.1:
     resolution: {integrity: sha512-lhWjDXJhe3UZw2uu3ztX51SJAPGPey1Tff2RK3TyZURwbuI4vximQLzz4nQfCv8CZq4xx7uIiogHMMoSJPr33A==}
