@@ -23,7 +23,7 @@
     "@iconify/json": "^1.0.12",
     "@types/nprogress": "^0.2.0",
     "@vitejs/plugin-vue": "^1.10.2",
-    "critters": "^0.0.15",
+    "critters": "^0.0.22",
     "cross-env": "^7.0.3",
     "eslint": "^8.4.1",
     "https-localhost": "^4.7.0",
